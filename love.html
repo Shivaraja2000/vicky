@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vicky</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
+    <!-- WOW.js and Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+     <!-- Preloader -->
+     <div id="preloader">
+        <div class="heart"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-heart"></i> My Love
+            </a>
+
+            <!-- Toggle Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Home Icon -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="love.html">
+                            <i class="fas fa-home"></i>
+                        </a>
+                    </li>
+                    <!-- Spotify Icon -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                    </li>
+                    <!-- Logout Icon -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="welcome">
+        <h2 class="text-center m-5" style="color: white;">Welcome to My Memories ❤️</h2>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Music Player Section -->
+    <div class="container music">
+        <div class="player">
+            <img src="images/5.jpg" alt="Album Cover" id="albumImage">
+            <h3>Songs</h3>
+            <div class="controls">
+                <button onclick="prevSong()">Previous</button>
+                <button onclick="togglePlay()">Play</button>
+                <button onclick="nextSong()">Next</button>
+            </div>
+        </div>
+
+        <!-- Audio element with multiple songs -->
+        <audio id="audioPlayer">
+            <source id="audioSource" src="audio/song1.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <hr class="text-white">
+
+
+
+
+
+
+    <div class="container hearts">
+        <div class="image left">
+          <img src="images/vicky.jpg" alt="Left Image" class="img-fluid">
+        </div>
+        <div class="heart">
+          <!-- <span>❤️</span> -->
+        </div>
+        <div class="image right">
+          <img src="images/udhya.jpg" alt="Right Image">
+        </div>
+      </div>
+
+    <!-- Quotes Section -->
+    <h1 class="text-white text-center mt-5">Memories With Us</h1>
+    <div class="container mt-5">
+        <p class="quotes p-3 text-center">
+            "உன் காதல் என் இதயத்துக்குள்,
+            பிரிந்தாலும் நீங்காத முத்திரை." 🖤        </p>
+    </div>
+
+    <!-- Owl Carousel -->
+    <!-- <div class="container mt-5">
+        <div class="owl-carousel owl-theme">
+            <div class="item wow animate__fadeIn" data-wow-duration="1s">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="images/7.jpg" alt="Image 7" class="img-fluid card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">First FB Intro</h3>
+                        <p class="card-text">(April-20-2017)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item wow animate__fadeIn" data-wow-duration="1s">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="images/proposalday.webp" alt="Image 7" class="img-fluid card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Proposal Day</h3>
+                        <p class="card-text">(Oct-3-2017)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item wow animate__fadeIn" data-wow-duration="1.5s">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="images/2.jpg" alt="Image 2" class="img-fluid card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Hotel Day</h3>
+                        <p class="card-text">(November-21-2022)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item wow animate__fadeIn" data-wow-duration="1.5s">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="images/first.webp" alt="Image 2" class="img-fluid card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">First Gift</h3>
+                        <p class="card-text">(April-24-2018)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item wow animate__fadeIn" data-wow-duration="1.5s">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="images/images.jpeg" alt="Image 2" class="img-fluid card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Special Gift</h3>
+                        <p class="card-text">(Dec-7-2022)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item wow animate__fadeIn" data-wow-duration="1s">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="images/1.jpg" alt="Image 1" class="img-fluid card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Movie Day</h3>
+                        <p class="card-text">(November-12-2022)</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div> -->
+
+
+
+    <div class="container">
+        <div class="item wow animate__fadeIn" data-wow-duration="1s">
+            <div class="card">
+                <div class="image_item">
+                    <img src="images/7.jpg" alt="Left Image" class="img-fluid">
+                  </div>
+                <div class="card-body">
+                    <h3 class="card-title">First FB Intro</h3>
+                    <p class="card-text">(April-20-2017)</p>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+
+
+     <!-- Quotes Section -->
+     <!-- <h1 class="text-white text-center">Memories With Us</h1> -->
+     <div class="container mt-5">
+         <p class="quotes p-3 text-center">
+            "உன் சுவாசத்தில் என் உயிர்,
+உன் நேசத்தில் என் உலகம்." 🌎         </p>
+     </div>
+
+
+
+
+     <div class="container">
+        <div class="item wow animate__fadeIn" data-wow-duration="1s">
+            <div class="card">
+                <div class="image_item">
+                    <img src="images/proposalday.webp" alt="Left Image" class="img-fluid">
+                  </div>
+                <div class="card-body">
+                    <h3 class="card-title">First Gift</h3>
+                    <p class="card-text">(April 24 2018    )</p>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+
+    <div class="container mt-5">
+        <p class="quotes p-3 text-center">
+            "நீயின்றி நான் ஒரு வெறுமை,
+            நீ வந்தவுடன் என் உலகம் பரிபூரணம்." 💕        </p>
+    </div>
+
+    <div class="container mt-5">
+        <div class="card">
+            <!-- Video Section -->
+            <div class="card-video">
+                <video id="video1" class="video-player" width="100%" controls>
+                    <source src="videos/New folder/2 (1).mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="card-body text-center">
+                    <h3 class="card-title">Proposal Day</h3>
+                    <p class="card-text"> (Oct-03-2017)</p>
+
+                </div>
+            </div>
+
+        </div>
+    </div> 
+
+    <div class="container mt-5">
+        <div class="item wow animate__fadeIn" data-wow-duration="1s">
+            <div class="card">
+                <div class="image_">
+                    <img src="images/proposal day.jpg" alt="Left Image" class="img-fluid">
+                  </div>
+                <div class="card-body">
+                    <h3 class="card-title">Proposal Day</h3>
+                    <p class="card-text">(Oct-03-2017   )</p>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+      
+    </div>
+
+
+
+    <div class="container mt-5">
+        <p class="quotes p-3 text-center">
+            "உன் பார்வையில் தேங்கி நிற்கும் மழைத் துளிகள்,
+            என் இதயத்தில் காதலாக பொழிகிறது." 🌧️❤️       </p>
+    </div>
+
+    <div class="container mt-5">
+        <div class="card">
+            <!-- Video Section -->
+            <div class="card-video">
+                <video id="video1" class="video-player" width="100%" controls>
+                    <source src="videos/New folder/4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="card-body text-center">
+                    <h3 class="card-title">Special Gift</h3>
+                    <p class="card-text"> (Dec-07-2022)</p>
+
+                </div>
+            </div>
+
+        </div>
+    </div> 
+
+    <div class="container mt-5">
+        <p class="quotes p-3 text-center">
+           நீ எனக்காக தவிர்ப்பதும்,
+           நான் உனக்காக தவிப்பதுமே நம் காதலாகிவிட்டது!         </p>
+    </div>
+
+    <div class="container">
+        <div class="item wow animate__fadeIn" data-wow-duration="1s">
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="images/1.jpg" alt="Image 7" class="img-fluid card-img-top">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">First Movie </h3>
+                    <p class="card-text">(Nov-12-2022)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="card">
+            <!-- Video Section -->
+            <div class="card-video">
+                <video id="video1" class="video-player" width="100%" controls>
+                    <source src="videos/New folder/5.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="card-body text-center">
+                    <h3 class="card-title">First Movie (Love Today)</h3>
+                    <p class="card-text"> (Nov-12-2022)</p>
+
+                </div>
+            </div>
+
+        </div>
+    </div> 
+
+
+
+
+
+    <div class="container mt-5">
+        <p class="quotes p-3 text-center">
+            "உன் முகம் பார்க்கும் ஒவ்வொரு தருணமும்,
+            என் இதயத்துக்கு ஒரு புது வசந்தம்." 🌹        </p>
+    </div>
+
+    <div class="container">
+        <div class="item wow animate__fadeIn" data-wow-duration="1s">
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="images/hotalfirst.jpg" alt="Image 7" class="img-fluid card-img-top">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Hotel First Time  </h3>
+                    <p class="card-text">(Nov-21-2022)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="item wow animate__fadeIn" data-wow-duration="1s">
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="images/2.jpg" alt="Image 7" class="img-fluid card-img-top">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Hotel Second Time  </h3>
+                    <!-- <p class="card-text">(Nov-21-2022)</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Quotes Section -->
+    <h1 class="text-white text-center mt-5">Engagement</h1>
+    <div class="container mt-5">
+        <p class="quotes p-3 text-center">
+            "உன் கைகளில் என் கை சேரும் நேரம்,
+            உலகமே நிறைவாக தோன்றும்." 🌍        </p>
+    </div>
+
+
+
+
+
+
+    <div class="container">
+        <div class="item wow animate__fadeIn" data-wow-duration="1s">
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="images/engagement place.jpg" alt="Image 7" class="img-fluid card-img-top">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Engagement Place</h3>
+                    <p class="card-text">(25/05/2023)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="item wow animate__fadeIn" data-wow-duration="1s">
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="images/engagementring.jpg" alt="Image 7" class="img-fluid card-img-top">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Engagement Ring</h3>
+                    <!-- <p class="card-text">(25/05/2023)</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+
+    <div class="container mt-3">
+        <div class="item wow animate__fadeIn" data-wow-duration="1s">
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="images/6.jpg" alt="Image 7" class="img-fluid card-img-top">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Engagement </h3>
+                    <p class="card-text">(25/05/2023)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div class="item wow animate__fadeIn" data-wow-duration="1s">
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="images/ring.jpg" alt="Image 7" class="img-fluid card-img-top">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Engagement </h3>
+                    <p class="card-text">(25/05/2023)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+       <!-- Quotes Section -->
+      <h1 class="text-white text-center mt-5">Moon </h1>
+      <div class="container mt-5">
+          <p class="quotes p-3 ">
+            வெண்ணிலவே வெள்ளி வெள்ளி நிலாவே நட்சத்திரப் பட்டாளம் கூட்டிக்கொண்டு வந்தாய்...
+            </div>
+
+
+
+            <div class="container">
+                <div class="item wow animate__fadeIn" data-wow-duration="1s">
+                    <div class="card">
+                        <div class="card-img-container">
+                            <img src="images/moon.jpg" alt="Image 7" class="img-fluid card-img-top">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Moon in our Day </h3>
+                            <!-- <p class="card-text">(25/05/2023)</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!-- carousel in video  -->
+
+   <!-- Quotes Section -->
+   <h1 class="text-white text-center mt-5">Memories With Us </h1>
+   <!-- <div class="container mt-5">
+       <p class="quotes p-3 ">
+         வெண்ணிலவே வெள்ளி வெள்ளி நிலாவே நட்சத்திரப் பட்டாளம் கூட்டிக்கொண்டு வந்தாய்...
+         </div> -->
+
+
+    <div class="container mt-5">
+        <div class="owl-carousel owl-theme">
+            <!-- Card 1 -->
+            <div class="item wow animate__fadeIn" data-wow-duration="1s">
+                <div class="card">
+                    <!-- Video Section -->
+                    <div class="card-video">
+                        <video id="video1" class="video-player" width="100%" controls>
+                            <source src="videos/New folder/1 (3).mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Bus Travel</h3>
+                            <!-- <p class="card-text">Description (April-20-2017)</p> -->
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="item wow animate__fadeIn" data-wow-duration="1s">
+                <div class="card">
+                    <div class="card-video">
+                        <video id="video2" class="video-player" width="100%" controls>
+                            <source src="videos/New folder/3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Proposal Day</h3>
+                            <p class="card-text"> (Oct-03-2017)</p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="item wow animate__fadeIn" data-wow-duration="1s">
+                <div class="card">
+                    <div class="card-video">
+                        <video id="video2" class="video-player" width="100%" controls>
+                            <source src="videos/New folder/6.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Outing </h3>
+                            <!-- <p class="card-text">Description (April-20-2017)</p> -->
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="item wow animate__fadeIn" data-wow-duration="1s">
+                <div class="card">
+                    <div class="card-video">
+                        <video id="video2" class="video-player" width="100%" controls>
+                            <source src="videos/New folder/7.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Special Gift</h3>
+                            <p class="card-text"> (Dec-07-2022)</p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Add more cards as needed -->
+        </div>
+    </div>
+
+    <h1 class="text-white text-center mt-5">End Of Story</h1>
+    <!-- <div class="container mt-5">
+        <p class="quotes p-3 ">
+          வெண்ணிலவே வெள்ளி வெள்ளி நிலாவே நட்சத்திரப் பட்டாளம் கூட்டிக்கொண்டு வந்தாய்...
+          </div> -->
+
+
+          <div class="text-center m-5">
+            <img src="images/broken.png" alt="" width="100" height="100">
+          </div>
+
+          <div class="item wow animate__fadeIn" data-wow-duration="1s">
+            <div class="card">
+                <div class="card-video">
+                    <video id="video2" class="video-player" width="100%" controls>
+                        <source src="videos/New folder/8.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="card-body text-center">
+                        <h3 class="card-title">End Of Story</h3>
+                        <!-- <p class="card-text"> (Dec-07-2022)</p> -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+          
+      
+    <!-- Quotes Section -->
+    <h1 class="text-white text-center mt-5">End Of Story</h1>
+    <div class="container mt-5">
+        <p class="quotes p-3 ">
+            "நீ என் வாழ்க்கையின் அழகான கனவு, உன்னுடன் கழித்த ஒவ்வொரு நிமிடமும் சிறந்த ஒரு உண்மை."
+
+
+            </p>
+    
+    </div>
+
+
+    <!-- Bootstrap Bundle with Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+
+    <!-- WOW.js -->
+    <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.2/dist/wow.min.js"></script>
+
+    <!-- Initialize Owl Carousel and WOW.js -->
+    <script>
+        $(document).ready(function () {
+            // Initialize Owl Carousel
+            $(".owl-carousel").owlCarousel({
+                items: 1,                // Show 1 item at a time
+                loop: true,              // Infinite loop
+                margin: 10,              // Space between items
+                autoplay: true,          // Auto play the carousel
+                autoplayTimeout: 2000,   // Time between slides in ms (2000ms = 2 seconds)
+                autoplayHoverPause: true, // Pause autoplay on hover
+                responsive: {
+                    0: {
+                        items: 1 // 1 item for mobile view
+                    },
+                    600: {
+                        items: 2 // 2 items for tablet view
+                    },
+                    1000: {
+                        items: 3 // 3 items for desktop view
+                    }
+                }
+            });
+
+            // Initialize WOW.js
+            new WOW().init();
+        });
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
